@@ -8,30 +8,25 @@
 #MY STUFF
 #-------------------------------------------------------------------------------
 
-font pango:FiraCode 12
+font pango: SauceCode Pro Nerd Font 10
 
 exec_always --no-startup-id setxkbmap -option caps:swapescape
 exec_always --no-startup-id xset r rate 230 50
-#exec_always --no-startup-id xrandr --output HDMI-A-0 --mode 1920x1080
-exec_always --no-startup-id hsetroot -cover ~/repos/personal/enviroment/wallpapers/tree_maple_autumn_2560x1440.jpg
-
-for_window [class="kitty"] move container to workspace 2
-exec --no-startup-id kitty
+exec --no-startup-id change_wallpaper
 
 for_window [class="Firefox"] move container to workspace 1
 exec --no-startup-id firefox
 
-for_window [class="Skype"] move container to workspace 3
+for_window [class="kitty"] move container to workspace 2
+exec --no-startup-id kitty
+
 for_window [class="Discord"] move container to workspace 3
 for_window [class="Telegram"] move container to workspace 3
 for_window [class="Spotify"] move container to workspace 3
-exec --no-startup-id skypeforlinux
 
-for_window [class="obsidian"] move container to workspace 4
-exec --no-startup-id obsidian
-
-# start a terminal
 bindsym $mod+Return exec --no-startup-id kitty
+
+# vim mapping
 
 # change focus
 bindsym $mod+h focus left
@@ -50,6 +45,9 @@ bindsym $mod+o exec --no-startup-id dmenu_run
 
 # kill focused window
 bindsym $mod+Shift+c kill
+
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -B '' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -242,7 +240,5 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 bindsym $mod+r mode "resize"

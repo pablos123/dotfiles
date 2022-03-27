@@ -1,5 +1,6 @@
 alias weather='curl wttr.in'
 alias ls='ls --color=auto'
+alias l="ls"
 
 alias vim='nvim'
 alias vi='nvim'

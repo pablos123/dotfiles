@@ -1,0 +1,13 @@
+#!/bin/bash
+
+while true; do
+
+    items_count=$(expr $(ls -l ~/.wallpapers/ | wc -l) - 1)
+
+    image=$(( 1 + RANDOM % $items_count))
+
+    hsetroot -cover $HOME/.wallpapers/$image.jpg
+
+    sleep 300
+
+done

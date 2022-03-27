@@ -3,23 +3,23 @@ let path = stdpath('data') . '/plugged'
 call plug#begin(path)
 
 fu! TreeSitterUpdate(info)
-  " info is a dictionary with 3 fields that needs to be taken due to
-  " vim-plug convention
-  " - name:   name of the plugin
-  " - status: 'installed', 'updated', or 'unchanged'
-  " - force:  set on PlugInstall! or PlugUpdate!
-  exe ':TSUpdate'
-  exe ':TSInstall vim'
-  exe ':TSInstall c'
-  exe ':TSInstall perl'
-  exe ':TSInstall python'
-  exe ':TSInstall javascript'
-  exe ':TSInstall json'
-  exe ':TSInstall html'
-  exe ':TSInstall css'
-  exe ':TSInstall bash'
-  exe ':TSInstall yaml'
-  exe ':TSInstall lua'
+    " info is a dictionary with 3 fields that needs to be taken due to
+    " vim-plug convention
+    " - name:   name of the plugin
+    " - status: 'installed', 'updated', or 'unchanged'
+    " - force:  set on PlugInstall! or PlugUpdate!
+    exe ':TSUpdate'
+    exe ':TSInstall vim'
+    exe ':TSInstall c'
+    exe ':TSInstall perl'
+    exe ':TSInstall python'
+    exe ':TSInstall javascript'
+    exe ':TSInstall json'
+    exe ':TSInstall html'
+    exe ':TSInstall css'
+    exe ':TSInstall bash'
+    exe ':TSInstall yaml'
+    exe ':TSInstall lua'
 endf
 
 "---------------------

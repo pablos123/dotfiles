@@ -16,11 +16,11 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- move block of lines
-keymap("v", "<C-j>", ":m '>+1<cr>gv=gv", opts)
-keymap("v", "<C-k>", ":m '<-2<cr>gv=gv", opts)
+keymap("v", "<c-j>", ":m '>+1<cr>gv=gv", opts)
+keymap("v", "<c-k>", ":m '<-2<cr>gv=gv", opts)
 
-keymap("n", "<C-j>", ":m .+1<cr>==", opts)
-keymap("n", "<C-k>", ":m .-2<cr>==", opts)
+keymap("n", "<c-j>", ":m .+1<cr>==", opts)
+keymap("n", "<c-k>", ":m .-2<cr>==", opts)
 
 -- completeness
 keymap("n", "Y", "y$", opts)
@@ -35,3 +35,9 @@ keymap("i", ",", ",<c-g>u", opts)
 keymap("i", ".", ".<c-g>u", opts)
 keymap("i", "!", "!<c-g>u", opts)
 keymap("i", "?", "?<c-g>u", opts)
+
+-- windows movement
+keymap("n", "<leader>h", "<c-w>h", opts)
+keymap("n", "<leader>j", "<c-w>j", opts)
+keymap("n", "<leader>k", "<c-w>k", opts)
+keymap("n", "<leader>l", "<c-w>l", opts)
