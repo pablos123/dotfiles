@@ -41,3 +41,6 @@ keymap("n", "<leader>h", "<c-w>h", opts)
 keymap("n", "<leader>j", "<c-w>j", opts)
 keymap("n", "<leader>k", "<c-w>k", opts)
 keymap("n", "<leader>l", "<c-w>l", opts)
+
+-- search for visually highlighted
+keymap("v", "//", "y/\\V<C-R>=escape(@\",'/\\')<CR><CR>", opts)

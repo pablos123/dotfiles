@@ -28,9 +28,6 @@ opts.wildmenu = true
 opts.hidden = true
 opts.timeoutlen = 850
 
-vim.cmd "set iskeyword+=-"
-vim.cmd "set iskeyword+=:"
-
 -- searching
 opts.incsearch = true
 opts.hlsearch = true
