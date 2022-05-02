@@ -33,12 +33,10 @@ Plug 'nvim-lua/plenary.nvim' "telescope dependency
 Plug 'sainnhe/gruvbox-material'
 "Better syntax highlight
 Plug 'pearofducks/ansible-vim', { 'do': './UltiSnips/generate.sh' }
-Plug 'nvim-treesitter/nvim-treesitter', { 'do': function('TreeSitterUpdate') }
+Plug 'nvim-treesitter/nvim-treesitter'
 
 " Icons for nvim-tree and telescope
 Plug 'kyazdani42/nvim-web-devicons'
-
-Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'vim-airline/vim-airline'
 "Just for showing the branch name
@@ -65,6 +63,7 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 
 Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'akinsho/toggleterm.nvim'
 
 call plug#end()
 

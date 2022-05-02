@@ -1,12 +1,22 @@
 #!/bin/bash
 
+declare -a wallpapers_array
+
+cd "$HOME"/.wallpapers/ || exit 1
+
+for wallpaper in *.jpg; do
+    wallpapers_array=("${wallpapers_array[@]}" "$wallpaper")
+done
+
+items_count="${#wallpapers_array[@]}"
+
 while true; do
 
-    items_count=$(expr $(ls -l ~/.wallpapers/ | wc -l) - 1)
+    random_index=$((RANDOM % items_count - 1))
 
-    image=$(( 1 + RANDOM % $items_count))
+    next_wallpaper="${wallpapers_array[$random_index]}"
 
-    hsetroot -cover $HOME/.wallpapers/$image.jpg
+    hsetroot -cover "$next_wallpaper"
 
     sleep 300
 

@@ -10,8 +10,8 @@ require'lspconfig'.perlpls.setup({
       enabled = true
   },
   on_attach = function(client)
-      client.resolved_capabilities.document_formatting = false
-      client.resolved_capabilities.document_range_formatting = false
+      client.server_capabilities.document_formatting = false
+      client.server_capabilities.document_range_formatting = false
   end,
 })
 
@@ -19,8 +19,8 @@ require'lspconfig'.perlpls.setup({
 -- if i want to format with pylsp or null-ls
 require("lspconfig").pylsp.setup({
   on_attach = function(client)
-      client.resolved_capabilities.document_formatting = false
-      client.resolved_capabilities.document_range_formatting = false
+      client.server_capabilities.document_formatting = false
+      client.server_capabilities.document_range_formatting = false
   end,
 })
 

@@ -28,6 +28,10 @@ opts.wildmenu = true
 opts.hidden = true
 opts.timeoutlen = 850
 
+-- disable netrw, I want to replace this with lf in a floating terminal
+vim.g.loaded_netrw       = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- searching
 opts.incsearch = true
 opts.hlsearch = true
