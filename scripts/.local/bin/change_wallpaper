@@ -1,18 +1,14 @@
 #!/bin/bash
 
-declare -a wallpapers_array
-
 cd "$HOME"/.wallpapers/ || exit 1
 
-for wallpaper in *.jpg; do
-    wallpapers_array=("${wallpapers_array[@]}" "$wallpaper")
-done
+wallpapers_array=(*.jpg)
 
 items_count="${#wallpapers_array[@]}"
 
 while true; do
 
-    random_index=$((RANDOM % items_count - 1))
+    random_index=$((RANDOM % items_count))
 
     next_wallpaper="${wallpapers_array[$random_index]}"
 
