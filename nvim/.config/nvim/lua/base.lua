@@ -63,3 +63,4 @@ autocmd("FileType", {
     command = "setl tabstop=2 shiftwidth=2",
     group = file_types_au
 })
+

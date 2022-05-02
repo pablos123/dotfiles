@@ -2,26 +2,6 @@ let path = stdpath('data') . '/plugged'
 
 call plug#begin(path)
 
-fu! TreeSitterUpdate(info)
-    " info is a dictionary with 3 fields that needs to be taken due to
-    " vim-plug convention
-    " - name:   name of the plugin
-    " - status: 'installed', 'updated', or 'unchanged'
-    " - force:  set on PlugInstall! or PlugUpdate!
-    exe ':TSUpdate'
-    exe ':TSInstall vim'
-    exe ':TSInstall c'
-    exe ':TSInstall perl'
-    exe ':TSInstall python'
-    exe ':TSInstall javascript'
-    exe ':TSInstall json'
-    exe ':TSInstall html'
-    exe ':TSInstall css'
-    exe ':TSInstall bash'
-    exe ':TSInstall yaml'
-    exe ':TSInstall lua'
-endf
-
 "---------------------
 "Dependencies
 "---------------------
@@ -33,13 +13,12 @@ Plug 'nvim-lua/plenary.nvim' "telescope dependency
 Plug 'sainnhe/gruvbox-material'
 "Better syntax highlight
 Plug 'pearofducks/ansible-vim', { 'do': './UltiSnips/generate.sh' }
-Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Icons for nvim-tree and telescope
 Plug 'kyazdani42/nvim-web-devicons'
 
 Plug 'vim-airline/vim-airline'
-"Just for showing the branch name
 Plug 'tpope/vim-fugitive'
 
 "---------------------
@@ -63,7 +42,11 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 
 Plug 'jose-elias-alvarez/null-ls.nvim'
-Plug 'akinsho/toggleterm.nvim'
+
+"---------------------
+"File viewing
+"---------------------
+Plug 'luukvbaal/nnn.nvim'
 
 call plug#end()
 
