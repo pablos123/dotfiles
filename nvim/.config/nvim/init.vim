@@ -3,12 +3,12 @@ let path = stdpath('data') . '/plugged'
 call plug#begin(path)
 
 "---------------------
-"Dependencies
+" Dependencies
 "---------------------
 Plug 'nvim-lua/plenary.nvim' "telescope dependency
 
 "---------------------
-"Visuals
+" Visuals
 "---------------------
 Plug 'sainnhe/gruvbox-material'
 "Better syntax highlight
@@ -22,14 +22,14 @@ Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 
 "---------------------
-"Searching
+" Searching
 "---------------------
 "C compiled fzf for faster telescope searching
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-telescope/telescope.nvim'
 
 "---------------------
-"LSP and completions
+" LSP and completions
 "---------------------
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -47,6 +47,11 @@ Plug 'jose-elias-alvarez/null-ls.nvim'
 "File viewing
 "---------------------
 Plug 'luukvbaal/nnn.nvim'
+
+"---------------------
+" Comments
+"---------------------
+Plug 'numToStr/Comment.nvim'
 
 call plug#end()
 
