@@ -1,11 +1,12 @@
 #!/bin/bash
 
-if [ $# -ne 1 ]; then
-    printf "\nUsage: reset_commit <name_of_the_branch_to_push_to>\n\n"
+if [ $# -ne 2 ]; then
+    printf "\nUsage: reset_commit <name_of_the_branch_to_push_to> \"<commit_message>\"\n\n"
     exit 1
 fi
 
 branch=$1
+commit=$2
 
 # Checkout to an orphan branch
 git checkout --orphan latest_branch
@@ -14,7 +15,7 @@ git checkout --orphan latest_branch
 git add -A
     
 # Commit the changes
-git commit -m "Reset commit"
+git commit -m "$commit"
     
 # Delete the master/main branch
 git branch -D "$branch"
