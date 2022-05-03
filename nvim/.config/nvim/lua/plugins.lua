@@ -5,6 +5,8 @@ vim.g.gruvbox_material_background = "medium" -- default value: "medium"
 
 require "plugins_conf/tree_sitter"
 
+require('Comment').setup()
+
 require "plugins_conf/telescope"
 
 -- the order of these two plugins is important due to
