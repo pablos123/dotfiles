@@ -1,11 +1,11 @@
 #!/bin/bash
 
-branch=$1
-
 if [ $# -ne 1 ]; then
     printf "\nUsage: reset_commit <name_of_the_branch_to_push_to>\n\n"
     exit 1
 fi
+
+branch=$1
 
 # Checkout to an orphan branch
 git checkout --orphan latest_branch

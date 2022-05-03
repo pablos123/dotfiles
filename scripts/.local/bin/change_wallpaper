@@ -4,7 +4,7 @@ cd "$HOME"/.wallpapers/ || exit 1
 
 wallpapers_array=(*.jpg)
 
-items_count="${#wallpapers_array[@]}"
+items_count=$(("${#wallpapers_array[@]}" - 1))
 
 while true; do
 
