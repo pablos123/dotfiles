@@ -28,3 +28,6 @@ fi
 if [[ -f "$HOME"/.other_bashrc ]]; then
     source ~/.other_bashrc
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
