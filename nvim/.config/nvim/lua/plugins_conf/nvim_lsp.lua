@@ -23,10 +23,3 @@ require("lspconfig").pylsp.setup({
       client.server_capabilities.document_range_formatting = false
   end,
 })
-
-local opts = { silent = true, noremap = true }
-local keymap = vim.api.nvim_set_keymap
-
-keymap("n", "<leader>d", "<cmd>lua vim.lsp.buf.definition()<cr>", opts)
-keymap("n", "<leader>r", "<cmd>lua vim.lsp.buf.references()<cr>", opts)
-keymap("n", "<leader>s", "<cmd>lua vim.lsp.buf.workspace_symbol('')<cr>", opts)

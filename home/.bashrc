@@ -6,7 +6,7 @@
 source /usr/share/bash-completion/completions/git
 source "$HOME"/.git-prompt.sh # __git_ps1 command in PS1
 
-export TERM="xterm-256color"
+#export TERM="xterm-256color"
 
 export GIT_PS1_SHOWDIRTYSTATE="true"
 export GIT_PS1_SHOWSTASHSTATE="true"
@@ -30,4 +30,3 @@ if [[ -f "$HOME"/.other_bashrc ]]; then
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
