@@ -12,6 +12,9 @@ font pango: SauceCode Pro Nerd Font 10
 
 exec_always --no-startup-id setxkbmap -option caps:swapescape
 exec_always --no-startup-id xset r rate 230 50
+exec_always --no-startup-id xset s 900
+exec_always --no-startup-id xset dpms 0 0 3600
+
 exec --no-startup-id compton
 exec --no-startup-id set_wallpaper
 
