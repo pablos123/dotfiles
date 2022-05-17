@@ -4,23 +4,34 @@ require("telescope").setup {
         file_ignore_patterns = {
             "%.git/",
         },
+        -- Default values except for -uu
+        vimgrep_arguments = {
+          'rg',
+          '--color=never',
+          '--no-heading',
+          '--with-filename',
+          '--line-number',
+          '--column',
+          '--smart-case',
+          '--no-binary',
+          '-uu' -- Search also hidden files, and gitignore
+        },
+        prompt_prefix="🍃 ",
     },
     pickers = {
         find_files = {
           theme = "dropdown",
           previewer = false,
           hidden = true,
-          prompt_prefix="🍁 ",
         },
         buffers = {
           theme = "dropdown",
           previewer = false,
-          prompt_prefix="🍁 ",
           -- Ignore the No Name buffer
           -- Ignore the buffer opening nvim with 'nvim .'
           file_ignore_patterns = {
               "^%[No Name%]$",
-              "^.$",
+              "^%.$",
           },
         },
     },

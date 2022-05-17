@@ -12,8 +12,4 @@ function TreeSitterUpdate()
     vim.cmd(':TSInstall lua')
 end
 
-local opts = { silent = true, noremap = true }
-local keymap = vim.api.nvim_set_keymap
-
 vim.api.nvim_create_user_command('TSSyntax', TreeSitterUpdate, {})
-
