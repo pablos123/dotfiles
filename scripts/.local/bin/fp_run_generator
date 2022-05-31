@@ -1,0 +1,14 @@
+#!/bin/bash
+
+verbose=""
+if [ "$1" == "-v" ]; then
+    verbose="True"
+fi
+
+for app in $(flatpak list --app --columns=application | awk '{print $1}'); do
+    if [ $verbose ]; then
+        printf "Creating %s in /usr/bin/...\n$app"
+    fi
+    printf "#!/bin/bash\nflatpak run %s$app\n" | sudo tee "/usr/bin/$app"
+    sudo chmod +x "/usr/bin/$app"
+done
