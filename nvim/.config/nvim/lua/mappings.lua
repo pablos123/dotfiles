@@ -28,6 +28,8 @@ keymap("n", "Y", "y$", opts)
 -- centered search
 keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
+
+-- delete line break but maintain cursor position
 keymap("n", "J", "mzJ`z", opts)
 
 -- more break points in insert mode
@@ -36,6 +38,15 @@ keymap("i", ".", ".<c-g>u", opts)
 keymap("i", "!", "!<c-g>u", opts)
 keymap("i", "?", "?<c-g>u", opts)
 
+-- windows managment
+
+-- create a vertical split window and move the cursor
+keymap("n", "<leader>v", "<c-w>v<c-w>l", opts)
+
+-- increase/decrease size (vertically) of current window
+keymap("n", "+", ":5winc ><cr>", opts)
+keymap("n", "-", ":5winc <<cr>", opts)
+
 -- windows movement
 keymap("n", "<leader>h", "<c-w>h", opts)
 keymap("n", "<leader>j", "<c-w>j", opts)
@@ -43,4 +54,4 @@ keymap("n", "<leader>k", "<c-w>k", opts)
 keymap("n", "<leader>l", "<c-w>l", opts)
 
 -- search for visually highlighted
-keymap("v", "//", "y/\\V<C-R>=escape(@\",'/\\')<CR><CR>", opts)
+keymap("v", "//", "y/\\V<c-r>=escape(@\",'/\\')<cr><cr>", opts)
