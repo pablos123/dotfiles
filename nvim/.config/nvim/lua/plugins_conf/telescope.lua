@@ -4,7 +4,7 @@ require("telescope").setup {
         file_ignore_patterns = {
             "%.git/",
         },
-        -- Default values except for -uu
+        -- Default values except for --hidden
         vimgrep_arguments = {
           'rg',
           '--color=never',
@@ -14,7 +14,7 @@ require("telescope").setup {
           '--column',
           '--smart-case',
           '--no-binary',
-          '-uu' -- Search also hidden files, and gitignore
+          '--hidden' -- Search also hidden files
         },
         prompt_prefix="🍃 ",
     },
