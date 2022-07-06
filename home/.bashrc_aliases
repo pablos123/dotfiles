@@ -1,3 +1,5 @@
+#!/bin/bash
+
 alias weather='curl wttr.in'
 alias ls='ls --color=auto'
 alias l="ls"
@@ -6,3 +8,6 @@ alias vim='nvim'
 alias vi='nvim'
 alias nano='nvim'
 alias :q='exit'
+
+# https://www.dns.toys/
+alias myip='dig ip @dns.toys'
